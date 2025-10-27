@@ -1,0 +1,263 @@
+.mainContainer {
+  background: linear-gradient(90deg, var(--dark-grey) 30%, var(--purple) 30%);
+}
+
+.homeContainer {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, var(--dark-grey) 30%, var(--purple) 30%);
+}
+
+.navContainer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+}
+
+.navContainer button {
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'CaviarDreams';
+  color: white;
+}
+
+.navContainer button:hover {
+  color: var(--dark-purple);
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-family: 'CaviarDreams';
+}
+
+.infoContainer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.contactContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 200px;
+  margin: 10px;
+  background: url('../../assets/images/crochetAvatarSquare.png') no-repeat;
+  background-size: contain;
+  border: 10px solid var(--purple);
+}
+
+.myInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.localisation {
+  display: flex;
+  align-items: center;
+  font-family: 'CenturyGothic';
+  font-size: 18px;
+  gap: 10px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.contactIcon {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 5px;
+  fill: var(--purple);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.582));
+}
+
+.contactIcon:hover {
+  fill: white;
+}
+
+.tooltipText {
+  visibility: hidden;
+  font-family: 'CenturyGothic';
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  padding-top: 6px;
+  width: 100px;
+  transform: translateX(-23%);
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}
+
+.prezContainer {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 100px;
+}
+
+.codingCrochet {
+  width: 550px;
+  margin-left: -100px;
+}
+
+.prez {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+
+.devPrez {
+  font-size: 17px;
+  font-family: 'CaviarDreamsItalic';
+}
+
+.crochetPrez {
+  font-size: 17px;
+  font-family: 'CenturyGothic';
+}
+
+.ribbonHighlight {
+  background: linear-gradient(to bottom, transparent 40%, var(--dark-purple) 40%);
+  padding-bottom: 2px;
+}
+
+@media screen and (max-width: 1500px) {
+  .codingCrochet {
+    width: 450px;
+  }
+
+  .infoContainer {
+    margin-top: 50px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .prez {
+    padding-right: 50px;
+  }
+
+  .devPrez {
+    font-size: 15px;
+  }
+
+  .crochetPrez {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    background: linear-gradient(90deg, var(--dark-grey) 25%, var(--purple) 25%);
+  }
+
+  .homeContainer {
+    background: linear-gradient(90deg, var(--dark-grey) 25%, var(--purple) 25%);
+  }
+
+  .infoContainer {
+    margin-top: 30px;
+  }
+
+  .contactContainer {
+    width: 25%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .codingCrochet {
+    width: 400px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .localisation {
+    transform: scale(90%);
+  }
+
+  .iconContainer {
+    transform: scale(85%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContainer {
+    background: var(--purple);
+  }
+
+  .homeContainer {
+    background: var(--purple);
+  }
+
+  .infoContainer {
+    display: block;
+    margin-top: 0;
+  }
+
+  .contactContainer {
+    width: 100%;
+    background-color: var(--dark-grey);
+    padding-top: 20px;
+  }
+
+  .codingCrochet {
+    display: none;
+  }
+
+  .prezContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .prez {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navContainer {
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .devPrez {
+    font-size: 13px;
+  }
+
+  .crochetPrez {
+    font-size: 13px;
+  }
+}

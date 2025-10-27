@@ -1,0 +1,68 @@
+:root {
+  --light-purple: #946aab;
+  --purple: #8f53a1;
+  --dark-purple: #64328a;
+  --light-grey: #81898e;
+  --dark-grey: #373a3b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  cursor: pointer;
+  border-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'CaviarDreams';
+  src: local('CAVIARDREAMS_BOLD)'), url('./assets/fonts/CAVIARDREAMS_BOLD.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'CaviarDreamsItalic';
+  src: local('CAVIARDREAMS_BOLDITALIC)'), url('./assets/fonts/CAVIARDREAMS_BOLDITALIC.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: local('GOTHIC)'), url('./assets/fonts/GOTHIC.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: local('GOTHICB)'), url('./assets/fonts/GOTHICB.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothicItalic';
+  src: local('GOTHICI)'), url('./assets/fonts/GOTHICI.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothicBoldItalic';
+  src: local('GOTHICBI)'), url('./assets/fonts/GOTHICBI.TTF') format('truetype');
+}
