@@ -7,11 +7,14 @@ import MailIcon from '../../assets/icons/mail.svg?react';
 import GithubIcon from '../../assets/icons/github.svg?react';
 import LinkedinIcon from '../../assets/icons/linkedin.svg?react';
 import CvIcon from '../../assets/icons/cv.svg?react';
-import { darkPurple, purple } from '../../utils/colors';
+
 import { github, linkedin, myEmail } from '../../utils/url';
+import { purple } from '../../utils/colors';
+import { skills } from '../../utils/skills';
 
 import Check from '../../components/Check/Check';
 import RollingBall from '../../components/rollingBall/RollingBall';
+import SkillCard from '../../components/SkillCard/SkillCard';
 
 function Home() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
@@ -36,7 +39,6 @@ function Home() {
           <button type='button'>FR</button>
           <button type='button'>EN</button>
         </nav>
-
         <div className='infoContainer'>
           <section className='contactContainer'>
             <div className='myInfo'>
@@ -93,7 +95,8 @@ function Home() {
           </section>
         </div>
       </div>
-      <div style={{ backgroundColor: darkPurple, height: 1000 }}></div>
+
+      <SkillCard skills={skills} />
     </div>
   );
 }
