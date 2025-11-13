@@ -1,0 +1,95 @@
+.projectList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projectButton {
+  width: 220px;
+  height: 150px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.projectSelected {
+  border: 4px solid white;
+}
+
+.projectButton:hover {
+  animation: zoom 3s forwards;
+}
+
+.project {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project p {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'CaviarDreams';
+}
+
+.project:hover {
+  animation: opacity 2s forwards;
+}
+
+@keyframes opacity {
+  0% {
+    background-color: #373a3b18;
+  }
+  100% {
+    background-color: #373a3bbe;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 130%;
+  }
+  100% {
+    background-size: 160%;
+  }
+}
+
+.projectLogo {
+  max-width: 150px;
+  max-height: 110px;
+}
+
+@media screen and (max-width: 560px) {
+  .projectList {
+    gap: 10px;
+  }
+
+  .projectButton {
+    width: 160px;
+    height: 100px;
+  }
+
+  .projectLogo {
+    max-width: 130px;
+    max-height: 80px;
+  }
+
+  .projectSelected {
+    border: 2px solid white;
+  }
+
+  .project p {
+    font-size: 12px;
+  }
+}

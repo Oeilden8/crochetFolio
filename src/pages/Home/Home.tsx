@@ -10,14 +10,16 @@ import CvIcon from '../../assets/icons/cv.svg?react';
 
 import { github, linkedin, myEmail } from '../../utils/url';
 import { purple } from '../../utils/colors';
-import { skills } from '../../utils/skills';
+import { projects, skills } from '../../utils/data';
 
 import Check from '../../components/Check/Check';
 import RollingBall from '../../components/rollingBall/RollingBall';
 import SkillCard from '../../components/SkillCard/SkillCard';
+import ProjectCard from '../../components/projectCards/ProjectCard';
 
 function Home() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [selectedProject, setSelectedProject] = useState<string>(projects[0].id);
 
   const copyMailToClipboard = async () => {
     try {
@@ -97,6 +99,10 @@ function Home() {
       </div>
 
       <SkillCard skills={skills} />
+
+      <section className='projectContainer'>
+        <ProjectCard projects={projects} onSelectedProject={setSelectedProject} selectedProject={selectedProject} />
+      </section>
     </div>
   );
 }

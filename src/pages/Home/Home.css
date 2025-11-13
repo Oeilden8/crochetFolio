@@ -149,6 +149,11 @@ h2 {
   padding-bottom: 2px;
 }
 
+.projectContainer {
+  background-color: var(--dark-grey);
+  padding: 50px;
+}
+
 @media screen and (max-width: 1500px) {
   .codingCrochet {
     width: 450px;
@@ -271,5 +276,9 @@ h2 {
 
   .crochetPrez {
     font-size: 13px;
+  }
+
+  .projectContainer {
+    padding: 30px 5px;
   }
 }
