@@ -154,6 +154,49 @@ h2 {
   padding: 50px;
 }
 
+.separator {
+  width: 30%;
+  height: 2px;
+  margin: 15px auto 5px auto;
+  box-shadow: 0px 3px 2px var(--purple);
+}
+
+.stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.stack p {
+  font-size: 15px;
+  font-family: 'CenturyGothic';
+  background-color: var(--purple);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0;
+}
+
+.visitButton {
+  display: block;
+  width: 120px;
+  margin: 25px auto 5px auto;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--dark-purple);
+  color: white;
+  font-size: 17px;
+  font-family: 'CaviarDreams';
+  text-align: center;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.582));
+}
+
+.visitButton:hover {
+  background-color: var(--light-purple);
+}
+
 @media screen and (max-width: 1500px) {
   .codingCrochet {
     width: 450px;
@@ -216,6 +259,10 @@ h2 {
 
   .iconContainer {
     transform: scale(85%);
+  }
+
+  .projectContainer {
+    padding: 10px;
   }
 }
 
@@ -280,5 +327,17 @@ h2 {
 
   .projectContainer {
     padding: 30px 5px;
+  }
+
+  .stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stack p {
+    font-size: 13px;
+    padding: 8px;
   }
 }

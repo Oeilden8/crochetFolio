@@ -16,10 +16,11 @@ import Check from '../../components/Check/Check';
 import RollingBall from '../../components/rollingBall/RollingBall';
 import SkillCard from '../../components/SkillCard/SkillCard';
 import ProjectCard from '../../components/projectCards/ProjectCard';
+import ProjectsCarousel from '../../components/Carousel/ProjectsCarousel';
 
 function Home() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<string>(projects[0].id);
+  const [selectedProjectId, setSelectedProjectId] = useState<string>(projects[0].id);
 
   const copyMailToClipboard = async () => {
     try {
@@ -30,6 +31,8 @@ function Home() {
       console.error('Failed to copy text: ', err);
     }
   };
+
+  const selectedProject = projects.find((project) => project.id === selectedProjectId);
 
   return (
     <div className='mainContainer'>
@@ -101,7 +104,22 @@ function Home() {
       <SkillCard skills={skills} />
 
       <section className='projectContainer'>
-        <ProjectCard projects={projects} onSelectedProject={setSelectedProject} selectedProject={selectedProject} />
+        <ProjectCard projects={projects} onSelectedProject={setSelectedProjectId} selectedProject={selectedProjectId} />
+
+        <div className='separator' />
+        <div className='stack'>
+          {selectedProject?.stack.map((tech) => (
+            <p key={tech}>{tech}</p>
+          ))}
+        </div>
+
+        {selectedProject?.url && (
+          <a className='visitButton' href={selectedProject.url} target='blank' rel='noreferrer'>
+            Visiter le site
+          </a>
+        )}
+
+        {selectedProject && <ProjectsCarousel demos={selectedProject.demos} projectId={selectedProjectId} />}
       </section>
     </div>
   );
