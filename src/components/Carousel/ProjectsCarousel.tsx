@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import './ProjectsCarousel.css';
 import { getMediaUrl } from '../../utils/formatter';
 import { DemoType, PlatformType } from '../../types/enums';
@@ -16,7 +15,6 @@ interface Demo {
 
 const ProjectsCarousel = (props: { demos: Demo[]; projectId: string }) => {
   const demos = props.demos;
-  const { t } = useTranslation();
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isMediaLoaded, setIsMediaLoaded] = useState<boolean>(false);

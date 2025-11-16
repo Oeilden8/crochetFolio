@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './WoolAnimation.css';
 import thatStitch from '../../assets/images/maille.png';
 
