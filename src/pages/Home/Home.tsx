@@ -7,6 +7,7 @@ import MailIcon from '../../assets/icons/mail.svg?react';
 import GithubIcon from '../../assets/icons/github.svg?react';
 import LinkedinIcon from '../../assets/icons/linkedin.svg?react';
 import CvIcon from '../../assets/icons/cv.svg?react';
+import CV from '../../assets/cv Lagadec React et Mobile.pdf';
 
 import { github, linkedin, myEmail } from '../../utils/url';
 import { purple } from '../../utils/colors';
@@ -116,7 +117,7 @@ function Home() {
               <a className='contactIcon' href={linkedin} target='blank' rel='noreferrer'>
                 <LinkedinIcon height={40} />
               </a>
-              <a className='contactIcon tooltip' href='src\assets\cv Lagadec React et Mobile.pdf'>
+              <a className='contactIcon tooltip' href={CV} target='blank'>
                 <CvIcon height={40} />
                 <span className='tooltipText'>Télécharger</span>
               </a>
