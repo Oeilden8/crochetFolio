@@ -149,9 +149,16 @@ h2 {
   padding-bottom: 2px;
 }
 
+.skillsTitle {
+  background-color: var(--dark-purple);
+  padding: 5px;
+  text-align: center;
+}
+
 .projectContainer {
   background-color: var(--dark-grey);
-  padding: 50px;
+  padding: 10px 50px 50px 50px;
+  text-align: center;
 }
 
 .separator {
@@ -195,6 +202,49 @@ h2 {
 
 .visitButton:hover {
   background-color: var(--light-purple);
+}
+
+.crochetTitle {
+  background-color: var(--purple);
+  padding: 5px;
+  text-align: center;
+}
+
+.crochetContainer {
+  background-color: var(--purple);
+  padding: 10px 40px 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.crochetCard {
+  width: 320px;
+  height: 230px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: 'CaviarDreams';
+  color: white;
+  padding: 10px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.crochetCard:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.imageCrochetFull {
+  max-width: 1200px;
+  max-height: 900px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -262,7 +312,12 @@ h2 {
   }
 
   .projectContainer {
-    padding: 10px;
+    padding: 10px 10px 40px 10px;
+  }
+
+  .imageCrochetFull {
+    max-width: 900px;
+    max-height: 700px;
   }
 }
 
@@ -300,6 +355,21 @@ h2 {
   .prez {
     padding: 20px;
     text-align: center;
+  }
+
+  .crochetContainer {
+    padding: 10px 15px 60px 15px;
+    gap: 15px;
+  }
+
+  .crochetCard {
+    width: 280px;
+    height: 200px;
+  }
+
+  .imageCrochetFull {
+    max-width: 800px;
+    max-height: 600px;
   }
 }
 
@@ -339,5 +409,21 @@ h2 {
   .stack p {
     font-size: 13px;
     padding: 8px;
+  }
+
+  .crochetContainer {
+    padding: 10px 5px 60px 5px;
+    gap: 5px;
+  }
+
+  .crochetCard {
+    width: 180px;
+    height: 130px;
+    font-size: 12px;
+  }
+
+  .imageCrochetFull {
+    max-width: 350px;
+    max-height: 500px;
   }
 }

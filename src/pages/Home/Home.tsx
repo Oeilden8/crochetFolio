@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Home.css';
 
 import codingCrochet from '../../assets/images/coding crochet sans balle.png';
@@ -10,17 +10,39 @@ import CvIcon from '../../assets/icons/cv.svg?react';
 
 import { github, linkedin, myEmail } from '../../utils/url';
 import { purple } from '../../utils/colors';
-import { projects, skills } from '../../utils/data';
+import { crochet, projects, skills } from '../../utils/data';
 
 import Check from '../../components/Check/Check';
 import RollingBall from '../../components/rollingBall/RollingBall';
 import SkillCard from '../../components/SkillCard/SkillCard';
 import ProjectCard from '../../components/projectCards/ProjectCard';
 import ProjectsCarousel from '../../components/Carousel/ProjectsCarousel';
+import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
+import { getMediaUrl } from '../../utils/formatter';
+import GeneralModal from '../../components/Modals/GeneralModal';
 
 function Home() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [selectedProjectId, setSelectedProjectId] = useState<string>(projects[0].id);
+  const [showScrollButton, setShowScrollButton] = useState<boolean>(false);
+  const [isCrochetModalOpen, setIsCrochetModalOpen] = useState<boolean>(false);
+  const [selectedCrochetImage, setSelectedCrochetImage] = useState<string>('');
+
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLElement | null>(null);
+  const crochetRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleScrollButtonDisplay = () => {
+      window.pageYOffset > 300 ? setShowScrollButton(true) : setShowScrollButton(false);
+    };
+
+    window.addEventListener('scroll', handleScrollButtonDisplay);
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollButtonDisplay);
+    };
+  }, []);
 
   const copyMailToClipboard = async () => {
     try {
@@ -36,13 +58,42 @@ function Home() {
 
   return (
     <div className='mainContainer'>
+      {showScrollButton && <ScrollTopButton />}
+
       <div className='homeContainer'>
         <nav className='navContainer'>
-          <button type='button'>Accueil</button>
-          <button type='button'>Skills</button>
-          <button type='button'>Réalisations</button>
-          <button type='button'>FR</button>
-          <button type='button'>EN</button>
+          <button
+            type='button'
+            onClick={() =>
+              skillsRef.current?.scrollIntoView({
+                behavior: 'smooth',
+              })
+            }
+          >
+            Skills
+          </button>
+          <button
+            type='button'
+            onClick={() =>
+              projectsRef.current?.scrollIntoView({
+                behavior: 'smooth',
+              })
+            }
+          >
+            Projets
+          </button>
+          <button
+            type='button'
+            onClick={() =>
+              crochetRef.current?.scrollIntoView({
+                behavior: 'smooth',
+              })
+            }
+          >
+            Crochet
+          </button>
+          {/* <button type='button'>FR</button>
+          <button type='button'>EN</button> */}
         </nav>
         <div className='infoContainer'>
           <section className='contactContainer'>
@@ -101,9 +152,16 @@ function Home() {
         </div>
       </div>
 
-      <SkillCard skills={skills} />
+      <div className='skillsTitle' ref={skillsRef}>
+        <h1>Skills</h1>
+      </div>
+      <div>
+        <SkillCard skills={skills} />
+      </div>
 
-      <section className='projectContainer'>
+      <section ref={projectsRef} className='projectContainer'>
+        <h1>Projets</h1>
+
         <ProjectCard projects={projects} onSelectedProject={setSelectedProjectId} selectedProject={selectedProjectId} />
 
         <div className='separator' />
@@ -120,6 +178,38 @@ function Home() {
         )}
 
         {selectedProject && <ProjectsCarousel demos={selectedProject.demos} projectId={selectedProjectId} />}
+      </section>
+
+      <div className='crochetTitle' ref={crochetRef}>
+        <h1>Projets en crochet</h1>
+      </div>
+
+      <section className='crochetContainer'>
+        {isCrochetModalOpen && selectedCrochetImage && (
+          <GeneralModal setIsOpen={setIsCrochetModalOpen}>
+            <img
+              src={getMediaUrl(`../assets/crochet/${selectedCrochetImage}`)}
+              alt={"zoom sur l'image selectionnée"}
+              className='imageCrochetFull'
+            />
+          </GeneralModal>
+        )}
+
+        {crochet.map((craft) => (
+          <button
+            key={craft.src}
+            className='crochetCard'
+            style={{
+              backgroundImage: `url(${getMediaUrl(`../assets/crochet/${craft.src}`)})`,
+            }}
+            onClick={() => {
+              setSelectedCrochetImage(craft.src);
+              setIsCrochetModalOpen(true);
+            }}
+          >
+            {craft.name}
+          </button>
+        ))}
       </section>
     </div>
   );

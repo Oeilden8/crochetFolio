@@ -1,0 +1,27 @@
+.scrollButton {
+  background-color: var(--light-purple);
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.scrollArrow {
+  fill: white;
+  transform: rotate(90deg);
+}
+
+.scrollButton:hover {
+  filter: drop-shadow(0px 0px 2px white);
+}
+
+@media screen and (max-width: 480px) {
+  .scrollButton {
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+  }
+}

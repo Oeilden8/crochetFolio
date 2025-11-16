@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 10px 40px 40px 40px;
   gap: 30px;
 }
 
@@ -23,40 +23,40 @@
 
 .expo:before {
   background: url('../../assets/icons/expo.svg') no-repeat;
-  background-position: 160px 160px;
-  background-size: 200px;
+  background-position: 160px 140px;
+  background-size: 180px;
 }
 
 .react:before {
   background: url('../../assets/icons/React.svg') no-repeat;
-  background-position: 160px 160px;
-  background-size: 200px;
+  background-position: 160px 140px;
+  background-size: 180px;
 }
 
 .drawing:before {
   background: url('../../assets/icons/drawing.svg') no-repeat;
-  background-position: 160px 160px;
-  background-size: 200px;
+  background-position: 160px 140px;
+  background-size: 180px;
 }
 
 .computer:before {
   background: url('../../assets/icons/computer.svg') no-repeat;
-  background-position: 160px 160px;
-  background-size: 200px;
+  background-position: 160px 140px;
+  background-size: 180px;
 }
 
 .skill {
   position: relative;
   padding: 15px;
-  width: 300px;
-  height: 270px;
+  width: 280px;
+  height: 230px;
   z-index: 20;
   box-shadow: -3px -3px 2px var(--purple);
 }
 
 .skill ul {
   list-style-position: inside;
-  font-size: 17px;
+  font-size: 15px;
   font-family: 'CenturyGothic';
 }
 
@@ -68,34 +68,26 @@
   vertical-align: middle;
 }
 
+@media screen and (max-width: 1400px) {
+  .skillContainer {
+    gap: 50px;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .skillContainer {
+    gap: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 @media screen and (max-width: 770px) {
-  .skill {
-    padding: 15px;
-    width: 280px;
-    height: 230px;
-  }
-
-  .skill ul {
-    font-size: 15px;
-  }
-
-  .expo:before {
-    background-position: 160px 140px;
-    background-size: 180px;
-  }
-
-  .react:before {
-    background-position: 160px 140px;
-    background-size: 180px;
-  }
-
-  .drawing:before {
-    background-position: 160px 140px;
-    background-size: 180px;
-  }
-
-  .computer:before {
-    background-position: 160px 140px;
-    background-size: 180px;
+  .skillContainer {
+    gap: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

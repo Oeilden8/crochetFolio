@@ -32,19 +32,19 @@ export const projects = [
     demos: [
       {
         src: 'app_general_cut.webm',
-        name: "Demonstration de l'accueil et d'un live de football",
+        name: "Demonstration vidéo de l'accueil et d'un live de football",
         type: DemoType.Video,
         platform: PlatformType.MobilePortrait,
       },
       {
         src: 'app_velo.webm',
-        name: "Demonstration d'un live de vélo",
+        name: "Demonstration vidéo d'un live de vélo",
         type: DemoType.Video,
         platform: PlatformType.MobilePortrait,
       },
       {
         src: 'app_volley.webm',
-        name: "Demonstration d'un live de volley en paysage",
+        name: "Demonstration vidéo d'un live de volley en paysage",
         type: DemoType.Video,
         platform: PlatformType.MobileLandscape,
       },
@@ -110,7 +110,7 @@ export const projects = [
     demos: [
       {
         src: 'regie.webm',
-        name: 'Demonstration de la régie',
+        name: 'Demonstration vidéo de la régie',
         type: DemoType.Video,
         platform: PlatformType.Desktop,
       },
@@ -162,7 +162,7 @@ export const projects = [
     demos: [
       {
         src: 'portail.webm',
-        name: 'Démonstration du portail partenaire',
+        name: 'Démonstration vidéo du portail partenaire',
         type: DemoType.Video,
         platform: PlatformType.Desktop,
       },
@@ -205,4 +205,31 @@ export const projects = [
     ],
     url: lolChampion,
   },
+];
+
+export const crochet = [
+  { src: 'Haku.jpg', name: 'Haku du voyage de Chihiro' },
+  { src: 'Totoro.jpg', name: 'Méga Totoro' },
+  { src: 'BonnetTotoro.jpg', name: 'Bonnet Totoro pour enfant' },
+  { src: 'ChaussonsTotoro.jpg', name: 'Chaussons Totoro pour bébé' },
+
+  { src: 'Teemo.jpg', name: 'Teemo de League of Legends' },
+  { src: 'DangoCats.jpg', name: 'Chats Dango de Teamfight Tactics' },
+  { src: 'Moonkin.jpg', name: 'Sélénien elfe de World of Warcraft' },
+
+  { src: 'Dracaufeu.jpg', name: 'Dracaufeu' },
+  { src: 'Pokemons.jpg', name: 'Chibi pokemons' },
+  { src: 'PokePanier.jpg', name: 'Panier pokeball' },
+  { src: 'Ronflex.jpg', name: 'Pokemon Ronflex' },
+  { src: 'PokeMobile.jpg', name: 'Mobile pokemon pour bébé' },
+
+  { src: 'Sac.jpg', name: 'Sac en crochet' },
+  { src: 'Morille.jpg', name: 'Champignon Morille' },
+  { src: 'Coulemelle.jpg', name: 'Champignon Coulemelle' },
+  { src: 'EliotDragon.jpg', name: 'Eliott le dragon' },
+  { src: 'Falkor.jpg', name: "Falkor de l'histoire sans fin" },
+  { src: 'Panda.jpg', name: 'Panda' },
+  { src: 'PinkRacoon.jpg', name: 'Raton laveur rose' },
+  { src: 'StormTrooper.jpg', name: 'StormTrooper' },
+  { src: 'Groot.jpg', name: "Je s'apelle Groot" },
 ];

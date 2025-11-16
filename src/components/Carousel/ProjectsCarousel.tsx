@@ -146,7 +146,6 @@ const ProjectsCarousel = (props: { demos: Demo[]; projectId: string }) => {
               key={index}
               onClick={() => goToSlide(index)}
               className={index === currentIndex ? 'dot dotActive' : 'dot dotInactive'}
-              aria-label={`${t('carousel.dot')} ${index + 1}`}
             />
           ))}
         </div>
