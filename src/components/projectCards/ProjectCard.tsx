@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './ProjectCard.css';
-import { getMediaUrl } from '../../utils/formatter';
 
 interface Project {
   id: string;
@@ -26,7 +25,7 @@ function ProjectCard(props: {
           className={project.id === props.selectedProject ? 'projectButton projectSelected' : 'projectButton'}
           key={project.id}
           style={{
-            backgroundImage: `url(${getMediaUrl(`../assets/images/${project.backgroundImage}`)})`,
+            backgroundImage: `url(${project.backgroundImage})`,
           }}
           onMouseEnter={() => timeOutHovering(project.id)}
           onMouseLeave={() => setHoveringId('none')}
@@ -36,13 +35,7 @@ function ProjectCard(props: {
             {hoveringId === project.id ? (
               <p>{project.description}</p>
             ) : (
-              project.logo && (
-                <img
-                  src={getMediaUrl(`../assets/images/${project.logo}`)}
-                  alt={`logo ${project.id}`}
-                  className='projectLogo'
-                />
-              )
+              project.logo && <img src={project.logo} alt={`logo ${project.id}`} className='projectLogo' />
             )}
           </div>
         </button>

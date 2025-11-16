@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './ProjectsCarousel.css';
-import { getMediaUrl } from '../../utils/formatter';
 import { DemoType, PlatformType } from '../../types/enums';
 
 import ArrowLeft from '../../assets/icons/arrowLeft.svg?react';
@@ -43,8 +42,8 @@ const ProjectsCarousel = (props: { demos: Demo[]; projectId: string }) => {
       if (demo.platform === PlatformType.Desktop) {
         return (
           <img
-            key={demo.src}
-            src={getMediaUrl(`../assets/projects/images/${demo.src}`)}
+            key={demo.name}
+            src={demo.src}
             alt={demo.name}
             className='imageCarousel'
             onLoad={() => setIsMediaLoaded(true)}
@@ -53,11 +52,11 @@ const ProjectsCarousel = (props: { demos: Demo[]; projectId: string }) => {
       } else {
         return (
           <div
-            key={demo.src}
+            key={demo.name}
             className={demo.platform === PlatformType.MobilePortrait ? 'phoneBackground' : 'phoneBackground landscape'}
           >
             <img
-              src={getMediaUrl(`../assets/projects/images/${demo.src}`)}
+              src={demo.src}
               alt={demo.name}
               className={demo.platform === PlatformType.MobilePortrait ? 'phone' : 'phoneLandscape'}
               onLoad={() => setIsMediaLoaded(true)}
@@ -69,11 +68,7 @@ const ProjectsCarousel = (props: { demos: Demo[]; projectId: string }) => {
       if (demo.platform === PlatformType.Desktop) {
         return (
           <video controls key={demo.src} className='imageCarousel'>
-            <source
-              src={getMediaUrl(`../assets/projects/videos/${demo.src}`)}
-              type='video/webm'
-              onLoad={() => setIsMediaLoaded(true)}
-            />
+            <source src={demo.src} type='video/webm' onLoad={() => setIsMediaLoaded(true)} />
           </video>
         );
       } else {
@@ -87,11 +82,7 @@ const ProjectsCarousel = (props: { demos: Demo[]; projectId: string }) => {
               key={demo.src}
               className={demo.platform === PlatformType.MobilePortrait ? 'phone' : 'phoneLandscape'}
             >
-              <source
-                src={getMediaUrl(`../assets/projects/videos/${demo.src}`)}
-                type='video/webm'
-                onLoad={() => setIsMediaLoaded(true)}
-              />
+              <source src={demo.src} type='video/webm' onLoad={() => setIsMediaLoaded(true)} />
             </video>
           </div>
         );

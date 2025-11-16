@@ -18,7 +18,6 @@ import SkillCard from '../../components/SkillCard/SkillCard';
 import ProjectCard from '../../components/projectCards/ProjectCard';
 import ProjectsCarousel from '../../components/Carousel/ProjectsCarousel';
 import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
-import { getMediaUrl } from '../../utils/formatter';
 import GeneralModal from '../../components/Modals/GeneralModal';
 
 function Home() {
@@ -187,11 +186,7 @@ function Home() {
       <section className='crochetContainer'>
         {isCrochetModalOpen && selectedCrochetImage && (
           <GeneralModal setIsOpen={setIsCrochetModalOpen}>
-            <img
-              src={getMediaUrl(`../assets/crochet/${selectedCrochetImage}`)}
-              alt={"zoom sur l'image selectionnée"}
-              className='imageCrochetFull'
-            />
+            <img src={selectedCrochetImage} alt={"zoom sur l'image selectionnée"} className='imageCrochetFull' />
           </GeneralModal>
         )}
 
@@ -200,7 +195,7 @@ function Home() {
             key={craft.src}
             className='crochetCard'
             style={{
-              backgroundImage: `url(${getMediaUrl(`../assets/crochet/${craft.src}`)})`,
+              backgroundImage: `url(${craft.src})`,
             }}
             onClick={() => {
               setSelectedCrochetImage(craft.src);

@@ -1,6 +1,62 @@
 import { DemoType, PlatformType } from '../types/enums';
 import { lolChampion } from './url';
 
+import appBG from '../assets/images/champsApp.jpg';
+import regieBG from '../assets/images/ImagePublic.jpg';
+import regieLogo from '../assets/images/logoRegie.png';
+import champsLogo from '../assets/images/logoChamps.png';
+import portailBG from '../assets/images/ImagePublic-Claire.jpg';
+import logoLol from '../assets/images/leagueIcon.png';
+import lolBG from '../assets/images/summonerRift.jpg';
+
+import appAccueil from '../assets/projects/images/appAccueil.png';
+import basketLive from '../assets/projects/images/basketLive.png';
+import coureursLive from '../assets/projects/images/coureursLive.png';
+import courseLive from '../assets/projects/images/courseLive.png';
+import demoMatchs from '../assets/projects/images/demoMatchs.png';
+import footLive from '../assets/projects/images/footLive.png';
+import fullscreenBasket from '../assets/projects/images/fullscreenBasket.png';
+import appVideo from '../assets/projects/videos/app_general_cut.webm';
+import veloVideo from '../assets/projects/videos/app_velo.webm';
+import volleyVideo from '../assets/projects/videos/app_volley.webm';
+
+import regieAccueil from '../assets/projects/images/regieAccueil.jpg';
+import creation from '../assets/projects/images/creation.jpg';
+import campagne from '../assets/projects/images/campagne_en_cours.jpg';
+import params from '../assets/projects/images/params.jpg';
+import diffusion from '../assets/projects/images/diffusion.jpg';
+import regieVideo from '../assets/projects/videos/regie.webm';
+
+import dashboard from '../assets/projects/images/dashboard.jpg';
+import compet from '../assets/projects/images/compet.jpg';
+import empty from '../assets/projects/images/empty.jpg';
+import portailVideo from '../assets/projects/videos/portail.webm';
+
+import league from '../assets/projects/images/league.jpg';
+import champion from '../assets/projects/images/morgana.jpg';
+
+import bonnet from '../assets/crochet/BonnetTotoro.jpg';
+import chaussons from '../assets/crochet/ChaussonsTotoro.jpg';
+import coulemelle from '../assets/crochet/Coulemelle.jpg';
+import dangoCats from '../assets/crochet/DangoCats.jpg';
+import dracaufeu from '../assets/crochet/Dracaufeu.jpg';
+import eliott from '../assets/crochet/EliotDragon.jpg';
+import falkor from '../assets/crochet/Falkor.jpg';
+import groot from '../assets/crochet/Groot.jpg';
+import haku from '../assets/crochet/Haku.jpg';
+import selenien from '../assets/crochet/Moonkin.jpg';
+import morille from '../assets/crochet/Morille.jpg';
+import panda from '../assets/crochet/Panda.jpg';
+import racoon from '../assets/crochet/PinkRacoon.jpg';
+import mobile from '../assets/crochet/PokeMobile.jpg';
+import pokemons from '../assets/crochet/Pokemons.jpg';
+import panier from '../assets/crochet/PokePanier.jpg';
+import ronflex from '../assets/crochet/Ronflex.jpg';
+import sac from '../assets/crochet/Sac.jpg';
+import stormtrooper from '../assets/crochet/StormTrooper.jpg';
+import teemo from '../assets/crochet/Teemo.jpg';
+import totoro from '../assets/crochet/Totoro.jpg';
+
 export const skills = [
   { id: 'drawing', title: 'Design', skillList: ['Suite Adobe', 'Canva', 'Figma'] },
   {
@@ -20,7 +76,7 @@ export const projects = [
   {
     id: 'champsApp',
     description: 'Application mobile de streaming sportif, avec affichage de stats poussées',
-    backgroundImage: 'champsApp.jpg',
+    backgroundImage: appBG,
     stack: ['React Native', 'Typescript', 'React Query', 'Expo', 'Eas'],
     features: [
       'Création et gestion de compte',
@@ -31,61 +87,61 @@ export const projects = [
     ],
     demos: [
       {
-        src: 'app_general_cut.webm',
+        src: appVideo,
         name: "Demonstration vidéo de l'accueil et d'un live de football",
         type: DemoType.Video,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'app_velo.webm',
+        src: veloVideo,
         name: "Demonstration vidéo d'un live de vélo",
         type: DemoType.Video,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'app_volley.webm',
+        src: volleyVideo,
         name: "Demonstration vidéo d'un live de volley en paysage",
         type: DemoType.Video,
         platform: PlatformType.MobileLandscape,
       },
       {
-        src: 'appAccueil.png',
+        src: appAccueil,
         name: "Liste des compétitions sur l'écran d'accueil",
         type: DemoType.Image,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'demoMatchs.png',
+        src: demoMatchs,
         name: 'Menu avec la liste des matchs de démo',
         type: DemoType.Image,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'basketLive.png',
+        src: basketLive,
         name: "Live d'un match de basket avec stats",
         type: DemoType.Image,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'fullscreenBasket.png',
+        src: fullscreenBasket,
         name: "Live d'un match en plein ecran",
         type: DemoType.Image,
         platform: PlatformType.MobileLandscape,
       },
       {
-        src: 'footLive.png',
+        src: footLive,
         name: "Live d'un match de foot avec stats",
         type: DemoType.Image,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'coureursLive.png',
+        src: coureursLive,
         name: "Live d'une course avec liste des coureurs",
         type: DemoType.Image,
         platform: PlatformType.MobilePortrait,
       },
       {
-        src: 'courseLive.png',
+        src: courseLive,
         name: "Live d'une course avec le tracé",
         type: DemoType.Image,
         platform: PlatformType.MobilePortrait,
@@ -95,8 +151,8 @@ export const projects = [
   {
     id: 'champsPub',
     description: 'Site web de vente de publicités pour les sponsors',
-    logo: 'logoRegie.png',
-    backgroundImage: 'ImagePublic.jpg',
+    logo: regieLogo,
+    backgroundImage: regieBG,
     stack: ['React', 'Typescript', 'Redux'],
     features: [
       'Création et gestion de compte',
@@ -109,37 +165,37 @@ export const projects = [
     ],
     demos: [
       {
-        src: 'regie.webm',
+        src: regieVideo,
         name: 'Demonstration vidéo de la régie',
         type: DemoType.Video,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'regieAccueil.jpg',
+        src: regieAccueil,
         name: "Page d'accueil de la régie : login or signin",
         type: DemoType.Image,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'creation.jpg',
+        src: creation,
         name: "Création d'une campagne",
         type: DemoType.Image,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'params.jpg',
+        src: params,
         name: "Preview de l'emplacement de la publicité",
         type: DemoType.Image,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'diffusion.jpg',
+        src: diffusion,
         name: 'Paramètrage de la campagne',
         type: DemoType.Image,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'campagne_en_cours.jpg',
+        src: campagne,
         name: "Résumé d'une campagne",
         type: DemoType.Image,
         platform: PlatformType.Desktop,
@@ -149,8 +205,8 @@ export const projects = [
   {
     id: 'champsPartenaire',
     description: "Site web d'administration des clubs : programmation des diffusions, gestion des équipes et membres",
-    logo: 'logoChamps.png',
-    backgroundImage: 'ImagePublic-Claire.jpg',
+    logo: champsLogo,
+    backgroundImage: portailBG,
     stack: ['React', 'Typescript', 'Redux', 'Mui', 'Yup', 'Formik'],
     features: [
       'Création et gestion de compte',
@@ -161,25 +217,25 @@ export const projects = [
     ],
     demos: [
       {
-        src: 'portail.webm',
+        src: portailVideo,
         name: 'Démonstration vidéo du portail partenaire',
         type: DemoType.Video,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'dashboard.jpg',
+        src: dashboard,
         name: 'Résumé des lives',
         type: DemoType.Image,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'compet.jpg',
+        src: compet,
         name: 'Liste des compétitions',
         type: DemoType.Image,
         platform: PlatformType.Desktop,
       },
       {
-        src: 'empty.jpg',
+        src: empty,
         name: 'Exemple de catégorie vide',
         type: DemoType.Image,
         platform: PlatformType.Desktop,
@@ -189,8 +245,8 @@ export const projects = [
   {
     id: 'lolChampions',
     description: 'Site web permettant de trouver des informations sur les champions de League of Legends',
-    logo: 'leagueIcon.png',
-    backgroundImage: 'summonerRift.jpg',
+    logo: logoLol,
+    backgroundImage: lolBG,
     stack: ['React', 'Typescript', 'React Context'],
     features: [
       'Champs de recherche',
@@ -200,36 +256,36 @@ export const projects = [
       'Lien vers des guides dédiés',
     ],
     demos: [
-      { src: 'league.jpg', name: "Page d'accueil", type: DemoType.Image, platform: PlatformType.Desktop },
-      { src: 'morgana.jpg', name: 'Exemple de page de champion', type: DemoType.Image, platform: PlatformType.Desktop },
+      { src: league, name: "Page d'accueil", type: DemoType.Image, platform: PlatformType.Desktop },
+      { src: champion, name: 'Exemple de page de champion', type: DemoType.Image, platform: PlatformType.Desktop },
     ],
     url: lolChampion,
   },
 ];
 
 export const crochet = [
-  { src: 'Haku.jpg', name: 'Haku du voyage de Chihiro' },
-  { src: 'Totoro.jpg', name: 'Méga Totoro' },
-  { src: 'BonnetTotoro.jpg', name: 'Bonnet Totoro pour enfant' },
-  { src: 'ChaussonsTotoro.jpg', name: 'Chaussons Totoro pour bébé' },
+  { src: haku, name: 'Haku du voyage de Chihiro' },
+  { src: totoro, name: 'Méga Totoro' },
+  { src: bonnet, name: 'Bonnet Totoro pour enfant' },
+  { src: chaussons, name: 'Chaussons Totoro pour bébé' },
 
-  { src: 'Teemo.jpg', name: 'Teemo de League of Legends' },
-  { src: 'DangoCats.jpg', name: 'Chats Dango de Teamfight Tactics' },
-  { src: 'Moonkin.jpg', name: 'Sélénien elfe de World of Warcraft' },
+  { src: teemo, name: 'Teemo de League of Legends' },
+  { src: dangoCats, name: 'Chats Dango de Teamfight Tactics' },
+  { src: selenien, name: 'Sélénien elfe de World of Warcraft' },
 
-  { src: 'Dracaufeu.jpg', name: 'Dracaufeu' },
-  { src: 'Pokemons.jpg', name: 'Chibi pokemons' },
-  { src: 'PokePanier.jpg', name: 'Panier pokeball' },
-  { src: 'Ronflex.jpg', name: 'Pokemon Ronflex' },
-  { src: 'PokeMobile.jpg', name: 'Mobile pokemon pour bébé' },
+  { src: dracaufeu, name: 'Dracaufeu' },
+  { src: pokemons, name: 'Chibi pokemons' },
+  { src: panier, name: 'Panier pokeball' },
+  { src: ronflex, name: 'Pokemon Ronflex' },
+  { src: mobile, name: 'Mobile pokemon pour bébé' },
 
-  { src: 'Sac.jpg', name: 'Sac en crochet' },
-  { src: 'Morille.jpg', name: 'Champignon Morille' },
-  { src: 'Coulemelle.jpg', name: 'Champignon Coulemelle' },
-  { src: 'EliotDragon.jpg', name: 'Eliott le dragon' },
-  { src: 'Falkor.jpg', name: "Falkor de l'histoire sans fin" },
-  { src: 'Panda.jpg', name: 'Panda' },
-  { src: 'PinkRacoon.jpg', name: 'Raton laveur rose' },
-  { src: 'StormTrooper.jpg', name: 'StormTrooper' },
-  { src: 'Groot.jpg', name: "Je s'apelle Groot" },
+  { src: sac, name: 'Sac en crochet' },
+  { src: morille, name: 'Champignon Morille' },
+  { src: coulemelle, name: 'Champignon Coulemelle' },
+  { src: eliott, name: 'Eliott le dragon' },
+  { src: falkor, name: "Falkor de l'histoire sans fin" },
+  { src: panda, name: 'Panda' },
+  { src: racoon, name: 'Raton laveur rose' },
+  { src: stormtrooper, name: 'StormTrooper' },
+  { src: groot, name: "Je s'apelle Groot" },
 ];
